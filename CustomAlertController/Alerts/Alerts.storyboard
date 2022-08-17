@@ -91,6 +91,12 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="300" height="150"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Ue6-JI-610" id="mfF-Bx-XwT"/>
+                        <outlet property="messageLabel" destination="Y76-dr-IiQ" id="p4X-kh-MNa"/>
+                        <outlet property="okButton" destination="3Oo-0S-elp" id="lUD-Cs-n9F"/>
+                        <outlet property="titleLabel" destination="geO-Uz-uwN" id="X4t-7r-b3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

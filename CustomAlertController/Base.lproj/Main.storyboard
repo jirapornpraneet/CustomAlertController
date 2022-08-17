@@ -26,6 +26,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Test"/>
+                                <connections>
+                                    <action selector="alertTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fnz-8z-V4G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
