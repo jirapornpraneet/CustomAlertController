@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390D29F428ACDA220091838A /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390D29F328ACDA220091838A /* Alerts.storyboard */; };
 		39E47CA928AB976D00FD1333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E47CA828AB976D00FD1333 /* AppDelegate.swift */; };
 		39E47CAB28AB976D00FD1333 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E47CAA28AB976D00FD1333 /* SceneDelegate.swift */; };
 		39E47CAD28AB976D00FD1333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E47CAC28AB976D00FD1333 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390D29F328ACDA220091838A /* Alerts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alerts.storyboard; sourceTree = "<group>"; };
 		39E47CA528AB976D00FD1333 /* CustomAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E47CA828AB976D00FD1333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E47CAA28AB976D00FD1333 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				39E47CA828AB976D00FD1333 /* AppDelegate.swift */,
 				39E47CAA28AB976D00FD1333 /* SceneDelegate.swift */,
 				39E47CAC28AB976D00FD1333 /* ViewController.swift */,
+				390D29F328ACDA220091838A /* Alerts.storyboard */,
 				39E47CAE28AB976D00FD1333 /* Main.storyboard */,
 				39E47CB128AB977000FD1333 /* Assets.xcassets */,
 				39E47CB328AB977000FD1333 /* LaunchScreen.storyboard */,
@@ -128,6 +131,7 @@
 				39E47CB528AB977000FD1333 /* LaunchScreen.storyboard in Resources */,
 				39E47CB228AB977000FD1333 /* Assets.xcassets in Resources */,
 				39E47CB028AB976D00FD1333 /* Main.storyboard in Resources */,
+				390D29F428ACDA220091838A /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
