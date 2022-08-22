@@ -36,7 +36,11 @@ class CustomAlertController: UIViewController {
         titleLabel.text = payload.title
         messageLabel.text = payload.message
         
-        if (payload.buttons.count == 2) {
+        if (payload.buttons.count == 1) {
+            cancelButton.isHidden = true
+            createButton(uiButton: okButton, alertButton: payload.buttons[0])
+        }
+        else if (payload.buttons.count == 2) {
             createButton(uiButton: okButton, alertButton: payload.buttons[0])
             createButton(uiButton: cancelButton, alertButton: payload.buttons[1])
         }
