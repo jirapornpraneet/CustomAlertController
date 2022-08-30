@@ -12,8 +12,8 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="CustomAlertController" id="Y6W-OH-hqX" customClass="CustomAlertController" customModule="CustomAlertController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QvW-aj-KXm">
@@ -98,7 +98,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QvW-aj-KXm" secondAttribute="trailing" id="p1x-yX-hVK"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="300" height="150"/>
+                    <size key="freeformSize" width="300" height="200"/>
                     <connections>
                         <outlet property="cancelButton" destination="Ue6-JI-610" id="mfF-Bx-XwT"/>
                         <outlet property="messageLabel" destination="Y76-dr-IiQ" id="p4X-kh-MNa"/>
