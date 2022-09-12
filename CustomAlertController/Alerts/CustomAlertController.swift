@@ -14,12 +14,12 @@ struct AlertButton {
 }
 
 struct AlertPayload {
-    var title: String!
-    var titleColor: UIColor?
-    var message: String!
-    var messageColor: UIColor?
+    var title: String = ""
+    var titleColor: UIColor = .black
+    var message: String = ""
+    var messageColor: UIColor = .black
     var buttons: [AlertButton]!
-    var backgroundColor: UIColor?
+    var backgroundColor: UIColor = .white
     var isImage = false
     var nameImage = ""
 }
@@ -41,37 +41,22 @@ class CustomAlertController: UIViewController {
         messageLabel.text = payload.message
         checkImageView.isHidden = !payload.isImage
         viewTitleHeight.constant = 0.65
+        view.backgroundColor = payload.backgroundColor
         
         if payload.isImage {
             checkImageView.image = UIImage(named: payload.nameImage)
-            viewTitleHeight.constant = 0.7
+            viewTitleHeight.constant = 0.75
             
         }
         
-        if (payload.buttons.count == 1) {
+        if payload.buttons.count == 1 {
             cancelButton.isHidden = true
-            createButton(uiButton: okButton, alertButton: payload.buttons[0])
+            okButton.setTitleColor(payload.buttons[0].titleColor, for: .normal)
+        } else if (payload.buttons.count == 2) {
+            okButton.setTitleColor(payload.buttons[0].titleColor, for: .normal)
+            cancelButton.setTitleColor(payload.buttons[1].titleColor, for: .normal)
         }
-        else if (payload.buttons.count == 2) {
-            createButton(uiButton: okButton, alertButton: payload.buttons[0])
-            createButton(uiButton: cancelButton, alertButton: payload.buttons[1])
-        }
-        
-        if (payload.backgroundColor != nil) {
-            view.backgroundColor = payload.backgroundColor
-        }
-    }
-    
-    //MARK: Create custom alert buttons
-    private func createButton(uiButton: UIButton, alertButton: AlertButton) {
-        uiButton.setTitle(alertButton.title, for: .normal)
-        
-        if (alertButton.titleColor != nil) {
-            uiButton.setTitleColor(alertButton.titleColor, for: .normal)
-        }
-        if (alertButton.backgroundColor != nil) {
-            uiButton.backgroundColor = alertButton.backgroundColor
-        }
+
     }
     
     //MARK: UIButton Actions

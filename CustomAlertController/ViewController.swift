@@ -23,15 +23,15 @@ class ViewController: UIViewController {
     @IBAction func alertTapped() {
         let utils = Utils()
         
-        let button1 = AlertButton(title: "Yes", action: {
+        let button1 = AlertButton(title: "ยืนยัน", action: {
             print("Yes clicked")
+        }, titleColor: UIColor.black, backgroundColor: UIColor.clear)
+        
+        let button2 = AlertButton(title: "ยกเลิก", action: {
+            print("No clicked")
         }, titleColor: UIColor.red, backgroundColor: UIColor.clear)
         
-        let button2 = AlertButton(title: "No", action: {
-            print("No clicked")
-        }, titleColor: UIColor.lightGray, backgroundColor: UIColor.clear)
-        
-        let alertPayload = AlertPayload(title: "Two Button Alert", titleColor: UIColor.red, message: "Are you sure you want to delete?", messageColor: UIColor.green, buttons: [button1, button2], backgroundColor: UIColor.yellow,isImage: true,nameImage: "ic_check")
+        let alertPayload = AlertPayload(title: "ทำรายการสำเร็จ", titleColor: UIColor.black, message: "ยืนยันการทำรายการนี้ ?", messageColor: UIColor.black, buttons: [button1, button2], backgroundColor: UIColor.white,isImage: true,nameImage: "ic_check")
         
         utils.showAlert(payload: alertPayload, parentViewController: self)
     }
