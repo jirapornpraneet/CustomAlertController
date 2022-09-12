@@ -32,6 +32,7 @@ class CustomAlertController: UIViewController {
     @IBOutlet var okButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
     @IBOutlet var checkImageView: UIImageView!
+    @IBOutlet weak var viewTitleHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,12 @@ class CustomAlertController: UIViewController {
         titleLabel.text = payload.title
         messageLabel.text = payload.message
         checkImageView.isHidden = !payload.isImage
+        viewTitleHeight.constant = 0.65
         
         if payload.isImage {
             checkImageView.image = UIImage(named: payload.nameImage)
+            viewTitleHeight.constant = 0.7
+            
         }
         
         if (payload.buttons.count == 1) {
