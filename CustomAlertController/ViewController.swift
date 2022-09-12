@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             print("No clicked")
         }, titleColor: UIColor.lightGray, backgroundColor: UIColor.clear)
         
-        let alertPayload = AlertPayload(title: "Two Button Alert", titleColor: UIColor.red, message: "Are you sure you want to delete?", messageColor: UIColor.green, buttons: [button1, button2], backgroundColor: UIColor.yellow)
+        let alertPayload = AlertPayload(title: "Two Button Alert", titleColor: UIColor.red, message: "Are you sure you want to delete?", messageColor: UIColor.green, buttons: [button1, button2], backgroundColor: UIColor.yellow,isImage: false,nameImage: "ic_check")
         
         utils.showAlert(payload: alertPayload, parentViewController: self)
     }

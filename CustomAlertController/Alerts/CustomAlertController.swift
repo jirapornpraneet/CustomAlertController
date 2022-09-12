@@ -20,6 +20,8 @@ struct AlertPayload {
     var messageColor: UIColor?
     var buttons: [AlertButton]!
     var backgroundColor: UIColor?
+    var isImage = false
+    var nameImage = ""
 }
 
 class CustomAlertController: UIViewController {
@@ -29,12 +31,18 @@ class CustomAlertController: UIViewController {
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var okButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var checkImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleLabel.text = payload.title
         messageLabel.text = payload.message
+        checkImageView.isHidden = !payload.isImage
+        
+        if payload.isImage {
+            checkImageView.image = UIImage(named: payload.nameImage)
+        }
         
         if (payload.buttons.count == 1) {
             cancelButton.isHidden = true
